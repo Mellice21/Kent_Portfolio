@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | PCU Manila Student</title>
+  <link rel="stylesheet" href="Portfolio_Design.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+</head>
+<body>
+  <header>
+    <h1>Kenjo Portfolio</h1>
+    <p>Bachelor of Science in Information Technology 3rd Year Student • Philippine Christian University Manila</p>
+    <p id="skills"></p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#investments">Investments</a>
+    <a href="#contact">Contact</a>
+    <div class="theme-switch">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+  </nav>
+
+  <div class="container" id="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm a passionate 3rd year IT student from Philippine Christian University Manila. I love coding, designing, and learning about technology. I create websites, systems, and small applications using HTML, CSS, JavaScript, and C# WinForms.</p>
+  </div>
+
+  <div class="container" id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Loan Management System</h3>
+        <p>A Windows Form App with C# + SQL Server. Used for managing users, payments, and history.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>A clean responsive portfolio built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="card">
+        <h3>Windows Server 2012 VM</h3>
+        <p>Configured on VMware for learning enterprise technologies such as Active Directory, DHCP, DNS, IIS hosting, and user account management. Fully functional server environment for hands-on IT practice.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="investments">
+    <h2>My Investment Plans</h2>
+    <div class="investment-box">
+      <h3> Skills Investment</h3>
+      <ul>
+        <li>Web Development (HTML, CSS, JS)</li>
+        <li>Database Management (SQL Server)</li>
+        <li>OOP Programming (C#)</li>
+        <li>Cybersecurity — basics & awareness</li>
+      </ul>
+      <div class="skill-bar">
+    <span>Web Development</span>
+    <div class="bar"><div class="fill" style="width:30%"></div></div>
+  </div>
+  <div class="skill-bar">
+    <span>C#</span>
+    <div class="bar"><div class="fill" style="width:30%"></div></div>
+  </div>
+    </div>
+    <div class="investment-box">
+      <h3> Financial Investment (As a Student)</h3>
+      <ul>
+        <li>Start saving 20 pesos/day</li>
+        <li>GCash GSave or Maya Savings</li>
+        <li>Beginner stocks: PLDT, Globe, SM</li>
+        <li>Crypto only for learning (Not required)</li>
+        <li>Emergency fund goal: ₱5,000 → ₱10,000</li>
+      </ul>
+      
+    </div>
+  </div>
+  
+
+  <div class="container" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-list">
+
+      <a href="mailto:ongsottokenjo5@gmail.com" target="_blank" class="contact-item hover-reveal">
+      <span class="placeholder"><i class="fas fa-envelope"></i> Gmail</span>
+      <span class="hidden-text"><i class="fas fa-envelope"></i></span>
+      </a>
+      <a href="https://www.facebook.com/ongsottokent/" target="_blank" class="contact-item hover-reveal">
+      <span class="placeholder"><i class="fab fa-facebook"></i> Facebook</span>
+      <span class="hidden-text">Kent Joachim Ongsotto</span>
+      </a>
+       <a href="https://github.com/Mellice21" target="_blank" class="contact-item hover-reveal">
+      <span class="placeholder"><i class="fab fa-github"></i> GitHub</span>
+      <span class="hidden-text"><i class="fab fa-github"></i></span>
+      </a>
+  </div>
+  </div>
+  <footer>
+    <p>© 2025 Cute | Portfolio</p>
+  </footer>
+  <script src="Portfoli_Script.js"></script>
+</body>
+</html>
