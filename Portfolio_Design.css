@@ -1,0 +1,359 @@
+/* ===============================
+   RESET & GLOBAL STYLES
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===============================
+   HEADER
+================================= */
+header {
+  background: #003366;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+#skills::after {
+  content: '|';
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+/* ===============================
+   Dark Mode
+================================= */
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark header {
+  background: #001f3f;
+  color: #fff;
+}
+
+body.dark nav {
+  background: #002244;
+}
+
+body.dark .container {
+  background: #222;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark .card {
+  background: #333;
+}
+body.dark .container h2 {
+  color: #ffcc00; 
+}
+
+body.dark .investment-box {
+  background: #2a2a2a;
+  color: #fff; 
+}
+body.dark .investment-box h3 {
+  color: #ffcc00;       
+}
+body.dark .investment-box ul li {
+  color: #fff;         
+}
+body.dark .projects .card {
+  background: #333;      
+  color: #fff;           
+}
+
+body.dark .projects .card h3 {
+  color: #ffcc00;        
+}
+
+body.dark .projects .card p {
+  color: #fff;            
+}
+body.dark .contact-item {
+  background: #003366;
+}
+
+body.dark footer {
+  background: #001f3f;
+  color: #fff;
+}
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px; width: 19px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #003366;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* ===============================
+   NAVIGATION
+================================= */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #002244;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+nav a.active {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* ===============================
+   CONTAINERS / SECTIONS
+================================= */
+.container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.container.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.container p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* ===============================
+   PROJECT CARDS
+================================= */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  background: #e6f0ff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #002244;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+   INVESTMENT BOXES
+================================= */
+.investment-box {
+  background: #f0f8ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.investment-box h3 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.investment-box ul {
+  list-style: disc inside;
+}
+.skill-bar {
+  margin: 5px 0;
+}
+.skill-bar .bar {
+  width: 100%;
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.skill-bar .fill {
+  height: 100%;
+  background: #003366;
+  border-radius: 4px;
+  transition: width 0.5s;
+}
+
+/* ===============================
+   CONTACT LINKS
+================================= */
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.contact-item {
+  flex: 1 1 200px;
+  position: relative;
+  background: #003366;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contact-item:hover {
+  background: #ffcc00;
+  transform: translateY(-5px);
+}
+.contact-item .placeholder {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-item .hidden-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #fff;
+  transition: transform 0.3s;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.contact-item:hover .hidden-text {
+  transform: translate(-50%, -50%) scale(1);
+}
+.contact-item:hover .placeholder {
+  opacity: 0;
+}
+/* ===============================
+   FOOTER
+================================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #002244;
+  color: #fff;
+  margin-top: 40px;
+  border-top: 2px solid #003366;
+}
+
+/* ===============================
+   MEDIA QUERIES
+================================= */
+@media screen and (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+  }
+
+  .contact-list {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
